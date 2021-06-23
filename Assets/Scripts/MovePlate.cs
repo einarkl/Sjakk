@@ -35,10 +35,12 @@ public class MovePlate : MonoBehaviour
             if (cp.name == "w_K")
             {
                 controller.GetComponent<Game>().Winner("black");
+                controller.GetComponent<Game>().PlayMateSound();
             }
             if (cp.name == "b_K")
             {
                 controller.GetComponent<Game>().Winner("white");
+                controller.GetComponent<Game>().PlayMateSound();
             }
 
             Destroy(cp);

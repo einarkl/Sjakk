@@ -10,7 +10,7 @@ public class Game : MonoBehaviour
     public GameObject chessPiece;
 
     public AudioSource source;
-    public AudioClip clipMove, clipAttack;
+    public AudioClip clipMove, clipAttack, clipCheck, clipMate;
 
     private GameObject[,] positions = new GameObject[8, 8];
     private GameObject[] playerWhite = new GameObject[16];
@@ -155,5 +155,15 @@ public class Game : MonoBehaviour
     public void PlayAttackSound()
     {
         source.PlayOneShot(clipAttack);
+    }
+
+    public void PlayCheckSound()
+    {
+        source.PlayOneShot(clipCheck);
+    }
+
+    public void PlayMateSound()
+    {
+        source.PlayOneShot(clipMate);
     }
 }

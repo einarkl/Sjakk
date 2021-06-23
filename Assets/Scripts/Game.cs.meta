@@ -3,7 +3,13 @@ guid: a8c7dd772d4ddc346a67543d72c52a67
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - chessPiece: {instanceID: 0}
+  - source: {instanceID: 0}
+  - clipMove: {fileID: 8300000, guid: 821f22e76430e01499c8b7958e669214, type: 3}
+  - clipAttack: {fileID: 8300000, guid: 2cca484fa5fce684086e3dd6795b6b92, type: 3}
+  - clipCheck: {fileID: 8300000, guid: 6c8ac804b5e84cc4ea5a9c60299461c4, type: 3}
+  - clipMate: {fileID: 8300000, guid: ef61a65098cd51e49a50fd142ac79e58, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
