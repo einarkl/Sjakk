@@ -65,22 +65,54 @@ public class MovePlate : MonoBehaviour
         // Lang rokkade for hvit
         if (currentPiece == "w_K" && matrixX - currentPosition.x == -2)
         {
-            Debug.Log("Lang rokkade hvit");
+            GameObject rook = controller.GetComponent<Game>().GetPosition(0, 0);
+
+            controller.GetComponent<Game>().SetPositionEmpty(0, 0);
+
+            rook.GetComponent<ChessMan>().SetXBoard(3);
+            rook.GetComponent<ChessMan>().SetYBoard(0);
+            rook.GetComponent<ChessMan>().SetCoords();
+
+            controller.GetComponent<Game>().SetPosition(rook);
         }
         // Kort rokkade for hvit
         else if (currentPiece == "w_K" && matrixX - currentPosition.x == 2)
         {
-            Debug.Log("Kort rokkade hvit");
+            GameObject rook = controller.GetComponent<Game>().GetPosition(7, 0);
+
+            controller.GetComponent<Game>().SetPositionEmpty(7, 0);
+
+            rook.GetComponent<ChessMan>().SetXBoard(5);
+            rook.GetComponent<ChessMan>().SetYBoard(0);
+            rook.GetComponent<ChessMan>().SetCoords();
+
+            controller.GetComponent<Game>().SetPosition(rook);
         }
         // Lang rokkade for svart
         else if (currentPiece == "b_K" && matrixX - currentPosition.x == -2)
         {
-            Debug.Log("Lang rokkade svart");
+            GameObject rook = controller.GetComponent<Game>().GetPosition(0, 7);
+
+            controller.GetComponent<Game>().SetPositionEmpty(0, 7);
+
+            rook.GetComponent<ChessMan>().SetXBoard(3);
+            rook.GetComponent<ChessMan>().SetYBoard(7);
+            rook.GetComponent<ChessMan>().SetCoords();
+
+            controller.GetComponent<Game>().SetPosition(rook);
         }
         // Kort rokkade for svart
         else if (currentPiece == "b_K" && matrixX - currentPosition.x == 2)
         {
-            Debug.Log("Kort rokkade svart");
+            GameObject rook = controller.GetComponent<Game>().GetPosition(7, 7);
+
+            controller.GetComponent<Game>().SetPositionEmpty(7, 7);
+
+            rook.GetComponent<ChessMan>().SetXBoard(5);
+            rook.GetComponent<ChessMan>().SetYBoard(7);
+            rook.GetComponent<ChessMan>().SetCoords();
+
+            controller.GetComponent<Game>().SetPosition(rook);
         }
 
         controller.GetComponent<Game>().NextTurn();
